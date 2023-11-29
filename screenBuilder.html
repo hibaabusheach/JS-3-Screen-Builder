@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a description of the current page">
+    <meta name="keywords" content="This is a Screen Builder">
+
+    <!-- Google's Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&family=Satisfy&display=swap" rel="stylesheet">
+
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="./screenBuilder.css">
+    <title>Sidebar Menu Screen Builder</title>
+</head>
+<body>
+    <nav class="content">
+        <header>
+            <div class="text header-text">
+                <h1 class="name">בונה מסך</h1>
+                <span class="description">לבנות ולעצב את הדף שלך</span>
+            </div>
+        </header>
+
+        <div class="menu-content">
+            <form action="#">
+                <div class="menu">
+
+                    <div class="control-flex-row">
+                        <div class="inputBox-A text">
+                            סוג האלמנט
+                            <select name="elementSelector" id="elementSelector">
+                                <option value="h1">h1</option>
+                                <option value="h2">h2</option>
+                                <option value="h3">h3</option>
+                                <option value="p">p</option>
+                                <option value="div">div</option>
+                                <option value="span">span</option>
+                            </select>
+                        </div>
+    
+                        <div class="inputBox-A text">
+                            <label for="useColor">רקע</label>
+                            <input type="color" id="useColor" class="bg-color">
+                        </div>
+                    </div>
+                    
+                    <!-- ============ Width + Height + Text ============ -->
+                    <div class="row">
+                        <div class="inputBox-B text">
+                            <label for="widthNum">רוחב</label>
+                            <input type="number" id="widthNum">
+                        </div>
+            
+                        <div class="inputBox-B text">
+                            <label for="heightNum">גובה</label>
+                            <input type="number" id="heightNum">
+                        </div>
+                    </div>
+    
+                    <!-- ============ TextArea ============ -->
+                    <div>
+                        <div class="inputBox-B text">
+                            <label for="txtContent">תוכן</label>
+                            <textarea name="" id="txtContent"></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- ============ Font ============ -->
+                    <div class="row">
+                        <div class="inputBox-B text">
+                            <label for="fontSize">גודל גופן</label>
+                            <input type="number" id="fontSize">
+                        </div>
+            
+                        <div class="inputBox-B text">
+                            <label for="fontColor">צבע הגופן</label>
+                            <input type="color" id="fontColor" class="bg-color">
+                        </div>
+    
+                    </div>
+                    
+                    <!-- ============ Border ============ -->
+                    <div class="row">
+                        <div class="inputBox-B text">
+                            <label for="border">עובי מסגרת</label>
+                            <input type="number" id="border">
+                        </div>
+            
+                        <div class="inputBox-B text">
+                            <label for="borderStyle">סגנון מסגרת</label>
+                            <input type="text" id="borderStyle">
+                        </div>
+                    </div>
+                    
+                    <div class="row">    
+                        <div class="inputBox-B text">
+                            <label for="borderColor">צבג מסגרת</label>
+                            <input type="color" id="borderColor" class="bg-color2">
+                        </div>
+                    </div>
+
+                    <!-- ============ Margin + Padding ============ -->
+                    <div class="row">
+                        <div class="inputBox-B text">
+                            <label for="marginNum">שולים</label>
+                            <input type="number" id="marginNum" class="input-width">
+                        </div>
+    
+                        <div class="inputBox-B text">
+                            <label for="paddingNum">ריפוד</label>
+                            <input type="number" id="paddingNum" class="input-width">
+                        </div>
+                    </div>
+                        
+                    <!-- ============ Box - Shadow ============ -->
+                    <div class="row">
+                        <div class="inputBox-B text">
+                            <label for="shadowX">ציר-X</label>
+                            <input type="number" id="shadowX">
+                        </div>
+            
+                        <div class="inputBox-B text">
+                            <label for="shadowY">ציר-Y</label>
+                            <input type="number" id="shadowY">
+                        </div>
+                    </div>
+                    
+                    <div class="row">            
+                        <div class="inputBox-B text">
+                            <label for="shadowColor">צבע צל</label>
+                            <input type="color" id="shadowColor" class="bg-color2">
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+
+            <div class="bottom-content">
+                <div class="buttons">
+                    <button id="add">הוסף</button>
+                    <button id="save">שמור</button>
+                    <button id="show">הצג</button>
+                    <button id="clear">ניקוי</button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="home-page">
+        <div class="text" id="container"></div>
+    </section>
+
+
+    <script src="./screenBuilder.js"></script>
+</body>
+</html>
